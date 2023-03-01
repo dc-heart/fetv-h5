@@ -24,7 +24,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header{
 	position: relative;
 	width: 750rpx;

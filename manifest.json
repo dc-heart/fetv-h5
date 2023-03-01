@@ -56,10 +56,6 @@
             "urlCheck" : false,
             "postcss" : true
 
-        "appid" : "",
-        "setting" : {
-            "urlCheck" : false
-
         },
         "usingComponents" : true
     },
