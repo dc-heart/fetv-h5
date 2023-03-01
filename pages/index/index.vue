@@ -1,4 +1,5 @@
 <template>
+
 	<view>
 		<!-- <view class="header">
 			<image class="fetv" src="/static/教育网图片/logo.png" mode="scaleToFill"></image>
@@ -170,12 +171,20 @@
 	
 		
 	</view>			
+=======
+	<view class="content">
+		<base-head>
+			<head-search></head-search>
+		</base-head>
+	</view>
+>>>>>>> 563e71fcefd79f187795693d497390c941fd3f51
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
+<<<<<<< HEAD
 				items:['推荐','要闻资讯','校园联播','FETV','招生考试'],
 				current: 0,
 				list: [{
@@ -217,20 +226,29 @@
 						title:'备战中考 | 化学：物质构成的奥秘 （厦门五缘实验学校 李玥)',
 						text: '50.3万次播放',
 					}]
+=======
+
+			}
+>>>>>>> 563e71fcefd79f187795693d497390c941fd3f51
 		},
 		onLoad() {
 
 		},
 		methods: {
+<<<<<<< HEAD
 		 onClickItem(e) {
 		      if (this.current != e.currentIndex) {
 		        this.current = e.currentIndex;
 		      }
 		    }
+=======
+
+>>>>>>> 563e71fcefd79f187795693d497390c941fd3f51
 		}
 	}
 </script>
 
+<<<<<<< HEAD
 <style lang="less" scoped>
 /deep/::-webkit-scrollbar{ display:none;
 	}
@@ -435,4 +453,7 @@
 	margin-top: 65rpx;
 	background-color: #f7f8f9;
 }	
+
+<style>
+
 </style>
