@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/college/college",
+    "pages/vote/vote"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#ba0825",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/教育网图片/g1.png",
+        "selectedIconPath": "static/教育网图片/r1.png"
+      },
+      {
+        "pagePath": "pages/college/college",
+        "text": "院校",
+        "iconPath": "static/教育网图片/g2.png",
+        "selectedIconPath": "static/教育网图片/r2.png"
+      },
+      {
+        "pagePath": "pages/vote/vote",
+        "text": "投票",
+        "iconPath": "static/教育网图片/g3.png",
+        "selectedIconPath": "static/教育网图片/r3.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/教育网图片/g4.png",
+        "selectedIconPath": "static/教育网图片/g4.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

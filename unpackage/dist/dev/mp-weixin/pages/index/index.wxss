@@ -1,0 +1,99 @@
+.header.data-v-57280228 {
+  position: relative;
+  width: 750rpx;
+  height: 149rpx;
+  background-color: #ba0825;
+}
+.header .fetv.data-v-57280228 {
+  width: 116rpx;
+  height: 88rpx;
+  margin-left: 29rpx;
+  margin-top: 33rpx;
+}
+.header .title.data-v-57280228 {
+  position: absolute;
+  width: 346rpx;
+  height: 30rpx;
+  left: 162rpx;
+  top: 33rpx;
+  color: #ffdcab;
+  font-size: 30rpx;
+  font-family: NotoSansHans-Bold;
+}
+.header .supervisor.data-v-57280228 {
+  position: absolute;
+  left: 165rpx;
+  top: 76rpx;
+  font-family: NotoSansHans-Regular;
+  font-size: 22rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 14rpx;
+  letter-spacing: 0rpx;
+  color: #ffdcab;
+  opacity: 0.5;
+}
+.header .host.data-v-57280228 {
+  position: absolute;
+  left: 165rpx;
+  bottom: 26rpx;
+  font-family: NotoSansHans-Regular;
+  font-size: 22rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #ffdcab;
+  opacity: 0.5;
+}
+.header .search.data-v-57280228 {
+  position: absolute;
+  left: 578rpx ;
+  top: 41rpx;
+  width: 151rpx;
+  height: 67rpx;
+  background-color: #5d0312;
+  border-radius: 34rpx;
+  opacity: 0.2;
+}
+.header .search .searchbutton.data-v-57280228 {
+  position: absolute;
+  margin-left: 99rpx ;
+  margin-top: 16rpx;
+  font-size: 30rpx;
+}
+.header .search .searchinput.data-v-57280228 {
+  position: absolute;
+  margin-top: 12rpx;
+  margin-left: 24rpx;
+}
+.content .content-image.data-v-57280228 {
+  width: 705rpx;
+  height: 424rpx;
+}
+.content .latest-information .information-text.data-v-57280228 {
+  margin-left: 70rpx;
+  margin-top: 44rpx;
+  font-size: 28rpx;
+  color: #272727;
+}
+.content .latest-information .information-text.data-v-57280228::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 740rpx;
+  left: 235rpx;
+  border-radius: 50%;
+  background: #ba0825;
+}
+.content .important-news.data-v-57280228 {
+  font-family: NotoSansHans-Bold;
+  font-size: 34rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 68rpx;
+  letter-spacing: 0rpx;
+  color: #272727;
+}
+
