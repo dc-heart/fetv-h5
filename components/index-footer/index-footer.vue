@@ -9,14 +9,14 @@
 				<text class="linktitle">友情链接</text>
 			</view>
 			<view class="link">
-				<uni-link href="https://www.baidu.com/" text="教育部" showUnderLine=false color="#3e3e3e" class="kind-link"></uni-link>
-				<uni-link href="https://www.baidu.com/" text="国家广播电视总局" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
-				<uni-link href="https://www.baidu.com/" text="隐私政策" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
-				<uni-link href="https://www.baidu.com/" text="福建广播电视局" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
-				<uni-link href="https://www.baidu.com/" text="中国教育电视台" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
-				<uni-link href="https://www.baidu.com/" text="用户协议" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
-				<uni-link href="https://www.baidu.com/" text="福建省教育厅" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
-				<uni-link href="https://www.baidu.com/" text="福建文艺网" showUnderLine=false color="#3e3e3e" class="kind-link"></uni-link>
+				<uni-link href="http://www.moe.gov.cn/" text="教育部"  fontSize="24rpx" showUnderLine=false color="#3e3e3e" class="kind-link"></uni-link>
+				<uni-link href="http://www.nrta.gov.cn/" text="国家广播电视总局" fontSize="24rpx" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
+				<text class="kind-link" style=" color:#3e3e3e;font-size: 24rpx;">隐私政策</text>
+				<uni-link href="http://gdj.fujian.gov.cn/" text="福建广播电视局" fontSize="24rpx" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
+				<uni-link href="http://m.cetv.cn/" text="中国教育电视台" fontSize="24rpx" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
+				<text class="kind-link" style="color:#3e3e3e;font-size: 24rpx;">用户协议</text>
+				<uni-link href="http://jyt.fujian.gov.cn/" text="福建省教育厅" fontSize="24rpx" showUnderLine=false color="#3e3e3e"class="kind-link"></uni-link>
+				<uni-link href="https://www.fjwyw.com/" text="福建文艺网" fontSize="24rpx" showUnderLine=false color="#3e3e3e" class="kind-link"></uni-link>
 			</view>
 			
 			<view class="tel-email">
@@ -130,6 +130,8 @@
 		font-size: 24rpx;
 		line-height: 68rpx;
 		.kind-link{
+			color:#3e3e3e;
+			font-size: 24rpx;
 			width: 30%;
 		}
 		.kind-link:nth-child(2){
@@ -175,7 +177,7 @@
 		display: flex;
 		justify-content: space-around;
 		.footer-photosm{
-			margin-top: 40rpx;
+			margin-top: 32rpx;
 			width: 61rpx;
 			height: 76rpx;
 		}	

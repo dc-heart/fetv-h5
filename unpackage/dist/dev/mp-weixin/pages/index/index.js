@@ -100,11 +100,35 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
+    indexHeader: function () {
+      return __webpack_require__.e(/*! import() | components/index-header/index-header */ "components/index-header/index-header").then(__webpack_require__.bind(null, /*! @/components/index-header/index-header.vue */ 59))
+    },
     uniSegmentedControl: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control */ "uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control.vue */ 59))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control */ "uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control.vue */ 66))
     },
     uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 66))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 73))
+    },
+    uniSection: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 80))
+    },
+    uniGrid: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid/uni-grid */ "uni_modules/uni-grid/components/uni-grid/uni-grid").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid/uni-grid.vue */ 87))
+    },
+    uniGridItem: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid-item/uni-grid-item */ "uni_modules/uni-grid/components/uni-grid-item/uni-grid-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.vue */ 94))
+    },
+    uniRow: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-row/uni-row */ "uni_modules/uni-row/components/uni-row/uni-row").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-row/uni-row.vue */ 101))
+    },
+    uniCol: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-col/uni-col */ "uni_modules/uni-row/components/uni-col/uni-col").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-col/uni-col.vue */ 108))
+    },
+    oDivider: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/o-divider/components/o-divider/o-divider */ "uni_modules/o-divider/components/o-divider/o-divider").then(__webpack_require__.bind(null, /*! @/uni_modules/o-divider/components/o-divider/o-divider.vue */ 115))
+    },
+    indexFooter: function () {
+      return __webpack_require__.e(/*! import() | components/index-footer/index-footer */ "components/index-footer/index-footer").then(__webpack_require__.bind(null, /*! @/components/index-footer/index-footer.vue */ 122))
     },
   }
 } catch (e) {
@@ -228,17 +252,159 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
       items: ['推荐', '要闻资讯', '校园联播', 'FETV', '招生考试'],
-      current: 0
+      current: 0,
+      list: [{
+        id: 0,
+        img: '../../static/教育网图片/p10.jpg',
+        text: '福建教育报道'
+      }, {
+        id: 1,
+        img: '../../static/教育网图片/p11.jpg',
+        text: '春冬季防疫'
+      }, {
+        id: 2,
+        img: '../../static/教育网图片/p12.jpg',
+        text: '乡约科普'
+      }, {
+        id: 3,
+        img: '../../static/教育网图片/p13.jpg',
+        text: '《我在厦门我很好》'
+      }]
     };
+    classroom: [{
+      id: 0,
+      img: '../../static/教育网图片/p13.jpg',
+      title: '最新！福建各地寒暑假时间定了',
+      text: '50.3万次播放'
+    }, {
+      id: 1,
+      img: '../../static/教育网图片/p14.jpg',
+      title: '备战中考 | 数学：对应为经相得益彰——函数问题中的“数形..',
+      text: '50.3万次播放'
+    }, {
+      id: 2,
+      img: '../../static/教育网图片/p20.jpg',
+      title: '备战中考 | 化学：物质构成的奥秘 （厦门五缘实验学校 李玥)',
+      text: '50.3万次播放'
+    }];
   },
-  onLoad: function onLoad() {},
   methods: {
     onClickItem: function onClickItem(e) {
-      if (this.current != e.currentIndex) {
+      if (this.current !== e.currentIndex) {
         this.current = e.currentIndex;
       }
     }

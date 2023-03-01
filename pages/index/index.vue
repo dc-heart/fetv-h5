@@ -1,17 +1,9 @@
 <template>
 
 	<view>
-		<!-- <view class="header">
-			<image class="fetv" src="/static/教育网图片/logo.png" mode="scaleToFill"></image>
-			<text class="title">福建教育网 www.fetv.cn</text>
-			<text class="supervisor" >主管:福建省委教育工委、福建省教育厅</text>
-			<text class="host">主办:福建教育电视台</text>
-			<view class="search">
-				<input type="text" placeholder="搜搜" class="searchinput" >
-				<icon type="search" class="searchbutton"></icon>
-			</view>
-		</view> -->
+	<!-- 头部区域 -->
 			<index-header></index-header>
+			<!-- 内容区域 -->
 		 <uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" styleType="text" activeColor="#ba0825"></uni-segmented-control>
 		        <view class="content">
 		        	<view v-show="current === 0">
@@ -76,7 +68,7 @@
 		        		   							<text class="wonderful-replays2">精彩回放</text>
 		        		   						</view>
 		        		   						</scroll-view>
-		        		   						<image src="../../static/教育网图片/p9.png" style="width:705rpx;height: 213rpx;margin-top: 60rpx;"></image>	
+		        		   						<image src="../../static/教育网图片/p9.png" style="width:705rpx;height: 213rpx;margin-top: 60rpx; margin-left: 24rpx;"></image>	
 		        		   </uni-section>
 		        		
 		        		   <uni-section titleFontSize="34rpx" title="自制栏目" style="margin-left: 30rpx; margin-top: 65rpx;">
@@ -147,7 +139,7 @@
 		        							</scroll-view>
 		        	</uni-section>	
 							
-							
+							<!-- 尾部区域 -->
 								<index-footer></index-footer>
 								
 						
@@ -225,78 +217,24 @@
 					}]
 
 
-			}
+			},
+			methods: {
+						onClickItem(e) {
+							if (this.current !== e.currentIndex) {
+								this.current = e.currentIndex
+							}
+						},
 
 	}
+	
+		}
 </script>
 
 
 <style lang="less" scoped>
 /deep/::-webkit-scrollbar{ display:none;
 	}
-// .header{
-// 	position: relative;
-// 	width: 750rpx;
-// 	height: 149rpx;
-// 	background-color: #ba0825;
-// 	.fetv{
-// 		width: 116rpx;
-// 		height: 88rpx;
-// 		margin-left: 29rpx;
-// 		margin-top: 33rpx;
-// 	}
-// 	.title{
-// 		position: absolute;
-// 		width: 346rpx;
-// 		height: 30rpx;
-// 		left: 162rpx;
-// 		top: 33rpx;
-// 		color:#ffdcab ;
-// 		font-size: 30rpx;
 
-// 	}
-// 	.supervisor{
-// 		position: absolute;
-// 		left: 165rpx;
-// 		top: 84rpx;
-// 		font-size: 22rpx;
-// 		line-height: 14rpx;
-// 		color: #ffdcab;
-// 		opacity: 0.5;
-// 	}
-// 	.host{
-// 		position: absolute;
-// 		left: 165rpx;
-// 		bottom: 10rpx;
-// 		font-size: 22rpx;
-// 		color: #ffdcab;
-// 		opacity: 0.5;	
-// 	}
-// 	.search{
-// 		position: absolute;
-// 		left:578rpx ;
-// 		top: 41rpx;
-// 		width: 151rpx;
-// 		height: 67rpx;
-// 		background-color: #5d0312;
-// 		border-radius: 34rpx;
-// 		opacity: 0.2;
-	
-// 		.searchbutton{
-// 			position: absolute;
-// 			margin-left:99rpx ;
-// 			margin-top: 16rpx;
-// 			font-size: 30rpx;
-// 		}
-// 		.searchinput{
-// 			position: absolute;
-// 			margin-top: 12rpx;
-// 			margin-left: 24rpx;
-// 		}
-// 	}
-	
-	
-// }
 .content {
 	.content-image{
 	width: 705rpx;
@@ -363,7 +301,7 @@
 				display: inline-block;
 				width: 383rpx;
 				height: 285rpx;
-				
+				margin: 26rpx 0 0 25rpx;
 				margin-top: 26rpx;
 			}
 			.specialtitle{
