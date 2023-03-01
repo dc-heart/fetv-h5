@@ -26,7 +26,7 @@
 				<text  class="tel">传真：0591-87802248</text>
 				<text  class="tel"> 涉未成年人不良信息举报电话: 0591-87091983</text>
 				<text  class="tel">广播电视节目制作经营许可证（闽）字第00026号</text>
-				<text  class="teltitle1">闽ICP备 <text class="tel-number">  05027762号-1 </text> </text>
+				<text  class="teltitle1">闽ICP备 <text class="tel-number1">  05027762号-1 </text> </text>
 				<text  class="teltitle">互联网新闻信息服务许可证编号<text class="tel-number">（35120190012）</text></text>
 				<text  class="teltitle">信息网络传播视听节目许可证号<text class="tel-number">（1309391）</text></text>
 				
@@ -159,6 +159,9 @@
 			color: #292929;
 			margin-left: 23rpx;
 			margin-top: 30rpx;
+			.tel-number1{
+				color: #1b72cb;;
+			}
 		}
 		.teltitle{
 			font-size: 24rpx;

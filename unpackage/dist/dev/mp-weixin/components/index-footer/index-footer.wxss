@@ -122,6 +122,9 @@
   margin-left: 23rpx;
   margin-top: 30rpx;
 }
+.footer .tel-email .teltitle1 .tel-number1.data-v-74c62578 {
+  color: #1b72cb;
+}
 .footer .tel-email .teltitle.data-v-74c62578 {
   font-size: 24rpx;
   line-height: 50rpx;
