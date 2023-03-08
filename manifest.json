@@ -50,12 +50,10 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-
         "appid" : "wx5fd1e4cbc9881ca6",
         "setting" : {
             "urlCheck" : false,
             "postcss" : true
-
         },
         "usingComponents" : true
     },
@@ -71,5 +69,14 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : ""
+                }
+            }
+        }
+    }
 }

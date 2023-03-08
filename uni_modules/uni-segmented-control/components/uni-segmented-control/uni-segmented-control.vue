@@ -14,7 +14,7 @@
 				        ? activeColor
 				        : '#fff'
 				      : styleType === 'text'
-				        ? '#000'
+				        ? '#5a5a5a'
 				        : activeColor}" class="segmented-control__text" :class="styleType === 'text' && index === currentIndex ? 'segmented-control__item--text': ''">{{ item }}</text>
 			</view>
 
@@ -132,9 +132,11 @@
 	}
 
 	.segmented-control__item--text {
-		border-bottom-style: solid;
-		border-bottom-width: 2px;
+		
 		padding: 6px 0;
+		border-bottom: 2px solid #ba0825;
+	border-bottom-width:8rpx;
+		
 	}
 
 	.segmented-control__text {

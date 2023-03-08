@@ -3,45 +3,37 @@
 	<view>
 	<!-- 头部区域 -->
 			<index-header></index-header>
+			<view class="search" @click="toSearch">
+				<input type="text" placeholder="搜搜" class="searchinput" >
+				<icon type="search" class="searchbutton"></icon>
+			</view>
 			<!-- 内容区域 -->
-		 <uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" styleType="text" activeColor="#ba0825"></uni-segmented-control>
+			<scroll-view scroll-x="true" class="scroll-x" >
+				 <uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" styleType="text" activeColor="#272727"></uni-segmented-control>
+			</scroll-view>
+			<view class="more">
+				<image src="../../static/教育网图片/gengduo-30.png" class="more-icon"></image>
+				<view class="more-shade">
+					
+				</view>
+			</view>
 		        <view class="content">
-		        	<view v-show="current === 0">
-		        	       <swiper :autoplay="true" :interval="3000" :duration="1000" style="width: 705rpx; height: 424rpx;margin-left: 24rpx;margin-top: 41rpx;">
-		        	       	<swiper-item>
-		        					<image class="content-image" src="../../static/教育网图片/p2.jpg" mode="scaleToFill"></image>
-		        	       	</swiper-item>
-		        	       	<swiper-item>
-		        					<image  class="content-image" src="../../static/教育网图片/p3.jpg" mode="scaleToFill"></image>
-		        	       	</swiper-item>
-		        			<swiper-item>
-		        					<image  class="content-image" src="../../static/教育网图片/p7.png" mode="scaleToFill"></image>
-		        			</swiper-item>   
-		        			<swiper-item>
-		        					<image  class="content-image" src="../../static/教育网图片/p5.jpg" mode="scaleToFill"></image>
-		        	       	</swiper-item>   
-		        			<swiper-item>
-		        					<image  class="content-image" src="../../static/教育网图片/p4.jpg" mode="scaleToFill"></image>
-		        	       	</swiper-item>
-		        	       </swiper>
+		        	<view v-show="current!==1">
+		        	      <carousel-map></carousel-map>
+						   <!-- 最新资讯 -->
 		        		   <view class="latest-information">
 		        				<image style="width: 159rpx;height: 30rpx; margin-left: 25rpx; margin-top: 42rpx;" src="../../static/教育网图片/组 3.png" mode=""></image>
 		        				<text class="information-text">发展全过程人民民主 彰显中国式民.</text>
 		        		   </view>
-		        		   <uni-card style="width: 705rpx;border: 0;
-		        		   height: 293rpx; padding: 0;" margin="44rpx 21rpx 33rpx 24rpx">
-		        			   <text class="important-news">要闻资讯</text>
-		        			   <text class="vertical"></text>
-		        			   <text class="daily-news">每日最新精彩资讯</text>
-		        			   <text class="see-more">查看更多</text>
-		        			   <uni-section title="重磅消息！福州教育新规，实施“六年一户学位.." type="circle" titleColor="#272727" class="titles"></uni-section>
-		        			   <uni-section title="小手拉大手 共迎冬奥会" type="circle"  titleColor="#272727" class="titles"></uni-section>
-		        			   <uni-section title="省教育厅推广首批9个落实“双减”工作典型案例" type="circle"  titleColor="#272727" class="titles"></uni-section>
-		        		   </uni-card>
-		        		   <image src="../../static/教育网图片/p8.jpg" style="width:705rpx;height: 213rpx; margin: 0 21rpx 0 24rpx;"></image>
-		        		   <uni-section titleFontSize="34rpx" title="专题" style="margin-left: 30rpx;">
+						   
+						   <!-- 要闻资讯 -->
+						   <index-news ></index-news>
+		        		 <image src="../../static/教育网图片/p8.jpg" style="width:705rpx;height: 213rpx; margin: 0 21rpx 0 24rpx;"></image>
+		        		  
+						  <!-- 专题 -->
+						   <uni-section titleFontSize="34rpx" title="专题" style="margin-left: 30rpx;">
 		        				<template v-slot:right>
-		        					<text style="font-size: 11px; color: #676767; margin-right: 26rpx;">查看更多</text>
+		        					<text style="font-size: 11px; color: #676767; margin-right: 26rpx;" @click="specialsMore">查看更多</text>
 		        				</template>
 		        			<scroll-view scroll-x="true" style="white-space: nowrap" :show-scrollbar=false>
 		        			<view class="specialcontent">
@@ -54,9 +46,10 @@
 		        			</scroll-view>
 		        		   </uni-section>
 		        		   
+						   <!-- 直播访谈 -->
 		        		   <uni-section titleFontSize="34rpx" title="直播访谈" style="margin-left: 30rpx; margin-top: 65rpx;">
 		        		   							<template v-slot:right>
-		        		   								<text style="font-size: 11px; color: #676767; margin-right: 26rpx">查看更多</text>
+		        		   								<text style="font-size: 11px; color: #676767; margin-right: 26rpx" @click="interviewsMore">查看更多</text>
 		        		   							</template>
 		        		   						<scroll-view scroll-x="true" style="white-space: nowrap" show-scrollbar>
 		        		   						<view class="specialcontent">
@@ -71,9 +64,10 @@
 		        		   						<image src="../../static/教育网图片/p9.png" style="width:705rpx;height: 213rpx;margin-top: 60rpx; margin-left: 24rpx;"></image>	
 		        		   </uni-section>
 		        		
+						<!-- 自制栏目 -->
 		        		   <uni-section titleFontSize="34rpx" title="自制栏目" style="margin-left: 30rpx; margin-top: 65rpx;">
 		        		   							<template v-slot:right>
-		        		   								<text style="font-size: 11px; color: #676767; margin-right: 26rpx">查看更多</text>
+		        		   								<text style="font-size: 11px; color: #676767; margin-right: 26rpx" @click="columnsMore">查看更多</text>
 		        		   							</template>
 		        									<uni-grid :column="2" :showBorder=false >
 		        											<uni-grid-item v-for="(item, index) in list" :key="item.id" style="height: 278rpx;">
@@ -84,9 +78,11 @@
 		        											</uni-grid-item>
 		        									</uni-grid>
 		        			</uni-section>
+							
+							<!-- 空中课堂 -->
 		        			<uni-section titleFontSize="34rpx" title="空中课堂" style="margin-left: 30rpx; margin-top: 65rpx;">
 		        							<template v-slot:right>
-		        								<text style="font-size: 11px; color: #676767; margin-right: 26rpx">查看更多</text>
+		        								<text style="font-size: 11px; color: #676767; margin-right: 26rpx" @click="classroomsMore">查看更多</text>
 		        							</template>
 		        							<view class="classroom-news">
 		        								<uni-row>
@@ -125,9 +121,12 @@
 		        							</view>
 		        				</uni-section>
 		        				 <o-divider />
-		        			<uni-section titleFontSize="34rpx" title="微视频" style="margin-left: 30rpx; margin-top: 65rpx;">
+								 
+								 <!-- 微视频 -->
+								 <micro-video></micro-video>
+		        			<!-- <uni-section titleFontSize="34rpx" title="微视频" style="margin-left: 30rpx; margin-top: 65rpx;">
 		        								<template v-slot:right>
-		        									<text style="font-size: 11px; color: #676767; margin-right: 26rpx">查看更多</text>
+		        									<text style="font-size: 11px; color: #676767; margin-right: 26rpx" @click="viedosMore">查看更多</text>
 		        								</template>
 		        							<scroll-view scroll-x="true" style="white-space: nowrap" show-scrollbar>
 		        							<view class="specialcontent">
@@ -137,7 +136,7 @@
 		        								<text class="specialtitle2">宁德脚步纪录片</text>
 		        							</view>
 		        							</scroll-view>
-		        	</uni-section>	
+		        	</uni-section>	 -->
 							
 							<!-- 尾部区域 -->
 								<index-footer></index-footer>
@@ -146,11 +145,32 @@
 		        </view>
 		            
 		        <view>
-		            <view v-show="current === 1">
-		                选项卡2的内容
-		             
+		            <view v-show="current===1" >
+		               <carousel-map></carousel-map>
+					   <today-news></today-news>
+						<uni-list>
+						 	<uni-list-item v-for="item in news"  >
+							 <!-- 自定义 header -->
+							<template v-slot:header>
+								<view class="list-title">{{item.title}}文章内容模拟：卡位饭卡盒饭弗兰卡维拉两个拉开就可是六十九公里的道路考虑到几乎垄断了</view>
+							</template>
+							<!-- 自定义 body -->
+							<template v-slot:body>
+							 	<image v-show="item.image" :src="baseUrl+item.image" style="width: 703rpx; height: 164rpx;border-radius: 8rpx;"></image>
+							</template>
+							<!-- 自定义 footer-->
+							 <template v-slot:footer>
+							 	<view class="list-footer" >
+									<text>{{item.collectionNum}}万评论</text>
+									<text>{{item.likeNum}}万点赞</text>
+								</view>
+							 </template>
+							 </uni-list-item>
+						 	
+						</uni-list>
+						<index-footer></index-footer>
 		            </view>
-		            <view v-show="current === 2">
+		          <!--  <view v-show="current === 2">
 		                选项卡3的内容
 		            </view>
 					<view v-show="current === 3">
@@ -158,7 +178,7 @@
 					</view>
 					<view v-show="current === 4">
 					    选项卡5的内容
-					</view>
+					</view> -->
 		        </view>
 	</view>
 	
@@ -173,9 +193,11 @@
 	export default {
 		data() {
 			return {
-
-				items:['推荐','要闻资讯','校园联播','FETV','招生考试'],
+				
+				items:['推荐','头条新闻','要闻聚焦','校园','FETV','招考','空中课堂','家长','师说','职场','微视频','直播访谈','聚焦党的十九届五中全会',],
 				current: 0,
+				news:[],
+				recentnews:[],
 				list: [{
 						id:0,
 						img: '../../static/教育网图片/p10.jpg',
@@ -196,7 +218,7 @@
 						img: '../../static/教育网图片/p13.jpg',
 						text: '《我在厦门我很好》',
 					}],
-			}
+			
 				classroom: [{
 						id:0,
 						img: '../../static/教育网图片/p13.jpg',
@@ -215,31 +237,136 @@
 						title:'备战中考 | 化学：物质构成的奥秘 （厦门五缘实验学校 李玥)',
 						text: '50.3万次播放',
 					}]
-
+		}
 
 			},
 			methods: {
 						onClickItem(e) {
+							console.log(e);
 							if (this.current !== e.currentIndex) {
 								this.current = e.currentIndex
+								if(e.currentIndex!==0){
+									uni.navigateTo({
+										url:'/pages/news/news?columnId='+e.currentIndex
+									})
+								}
+							
 							}
 						},
-
-	}
+						toSearch(){
+							uni.navigateTo({
+								url:'/pages/search/search'
+							})
+						},
+						
+						specialsMore(){
+							uni.navigateTo({
+								url:'/pages/specials/specials'
+							})
+						},
+						interviewsMore(){
+							uni.navigateTo({
+								url:'/pages/interviews/interviews'
+							})
+						},
+						columnsMore(){
+							uni.navigateTo({
+								url:'/pages/columns/columns'
+							})
+						},
+						classroomsMore(){
+							uni.navigateTo({
+								url:'/pages/classrooms/classrooms'
+							})
+						},
+						viedosMore(){
+							uni.navigateTo({
+								url:'/pages/video/video'
+							})
+						},
+					},
+			created(){
+				// 获取第一栏目数据
+				uni.request({
+					url:`${this.baseUrl}/index/fetv/column?columnId=1`,
+					method:'GET',
+					success: (res) => {
+					        console.log(res.data.rows[0].informationApiList);
+					        this.news =res.data.rows[0].informationApiList
+					    }
+				})
+			}
+		}	
 	
-		}
+		
 </script>
 
 
 <style lang="less" scoped>
 /deep/::-webkit-scrollbar{ display:none;
 	}
-
-.content {
-	.content-image{
-	width: 705rpx;
-	height: 424rpx;
+/deep/uni-text.segmented-control__text.segmented-control__item--text{
+	font-size: 36rpx;
+	color: #272727
+}
+.search{
+		position: absolute;
+		left:578rpx ;
+		top: 41rpx;
+		width: 151rpx;
+		height: 67rpx;
+		background-color: #5d0312;
+		border-radius: 34rpx;
+		opacity: 0.2;
+	
+		.searchbutton{
+			position: absolute;
+			margin-left:99rpx ;
+			margin-top: 16rpx;
+			font-size: 30rpx;
 		}
+		.searchinput{
+			position: absolute;
+			margin-top: 12rpx;
+			margin-left: 24rpx;
+			
+		}
+	}
+.scroll-x{
+	width: 100%;
+	white-space: nowrap;
+	
+	/deep/.uni-scroll-view-content{
+		width: 320%;
+		background-color: #f7f8f9;
+
+	}
+	.segmented-control{
+		height: 81rpx;
+	}
+}
+.more{
+	position: absolute;
+	right: 20rpx;
+	top: 178rpx;
+	width: 109rpx;
+	height: 26rpx;
+	display: flex;
+	flex-direction: row-reverse;
+	.more-icon{
+		width: 38rpx;
+		height: 28rpx;
+	}
+	.more-shade{
+		background-color: #f7f8f9;
+		width: 100%;
+		opacity: 0.9;
+	
+	}
+}
+.content {
+
+	
 	.latest-information{
 		.information-text{
 			margin-left: 70rpx;
@@ -253,48 +380,20 @@
 			position: absolute;
 			width:7px;
 			height:7px;
-			top:740rpx;
+			top:748rpx;
 			left:235rpx;
 			border-radius:50%;
 			background: #ba0825;	  
 		}
 		}
-		.important-news{
-			font-family: NotoSansHans-Bold;
-				font-size: 34rpx;
-				line-height: 68rpx;
-				letter-spacing: 0rpx;
-				color: #272727;
-		}
-		.vertical{
-				display: inline-block;
-				margin-left: 16rpx;
-				width: 1rpx;
-				height: 24rpx;
-				background-color: #dddddd;
-		}
-		.daily-news{
-				font-size: 26rpx;
-				font-style: italic;
-				line-height: 68rpx;
-				color: #777777;
-				margin-left: 21rpx;
-		}
-		.see-more{
-			    font-size: 22rpx;
-				line-height: 68rpx;
-				color: #676767;
-				margin-left: 185rpx;
-		}
+	
 		/deep/.uni-section .uni-section-header{
 			padding: 0;
 		}
 		/deep/.uni-section-header__decoration{
 			background-color:#ba0825;
 		}
-		.titles{
-			margin-top: 20rpx;
-		}
+		
 		.specialcontent{
 			height: 340rpx;
 			.specialimg{
@@ -368,7 +467,33 @@
 	
 }
 
-
+/deep/.uni-list-item__container{
+	flex-direction: column;
+	padding: 21rpx 24rpx 0;
+	
+}
+.list-title{
+		
+		font-family: NotoSansHans-Regular;
+		font-size: 30rpx;
+		font-weight: bold;
+		line-height: 47rpx;
+		letter-spacing: 0rpx;
+		color: #000000;
+}
+.list-footer{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 16rpx;
+			font-family: NotoSansHans-Regular;
+			font-size: 12px;
+			font-weight: 400;
+			font-stretch: normal;
+			line-height: 34px;
+			letter-spacing: 0px;
+			color: grey;
+			margin-left: 16rpx;
+			}
 </style>
 
 
