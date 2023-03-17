@@ -60,17 +60,17 @@
 			console.log(this.informationId);
 		},
 		created() {
+			uni.showLoading({
+				title: '加载中'
+			});
 			uni.request({
 			url:`${this.baseUrl}/index/fetv/information/getVideo?informationId=${this.informationId}`,
-
-
-
-
 			method:'GET',
 			success: (res) => {
 					console.log(res.data.data)
 					this.videodetails =res.data.data
 					console.log(this.videodetails);
+					uni.hideLoading();
 					}
 			})
 		}

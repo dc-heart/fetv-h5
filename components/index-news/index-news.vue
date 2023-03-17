@@ -34,7 +34,7 @@
 				// console.log(this.current);
 				// const allnews=encodeURIComponent(JSON.stringify(this.allnews))
 				uni.navigateTo({
-					url:"/pages/news/news"
+					url:"/pages/news/news?columnId=1"
 				})
 			},
 		},

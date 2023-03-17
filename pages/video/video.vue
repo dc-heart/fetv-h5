@@ -56,12 +56,16 @@
 			}
 		},
 		created() {
+			uni.showLoading({
+				title: '加载中'
+			});
 			uni.request({
 			url:`${this.baseUrl}/index/fetv/column/getVideoBySix?columnId=1`,
 			method:'GET',
 			success: (res) => {
 			        console.log(res.data)
 			        this.video =res.data.rows[0].informationApiList
+					uni.hideLoading();
 					}
 		})
 		}

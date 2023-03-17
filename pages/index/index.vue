@@ -194,7 +194,7 @@
 		data() {
 			return {
 				
-				items:['推荐','头条新闻','要闻聚焦','校园','FETV','招考','空中课堂','家长','师说','职场','微视频','直播访谈','聚焦党的十九届五中全会',],
+				items:['头条新闻','要闻聚焦','校园','FETV','招考','空中课堂','家长','师说','职场','微视频','直播访谈','聚焦党的十九届五中全会',],
 				current: 0,
 				news:[],
 				recentnews:[],
@@ -245,13 +245,13 @@
 							console.log(e);
 							if (this.current !== e.currentIndex) {
 								this.current = e.currentIndex
-								if(e.currentIndex!==0){
+								const index=e.currentIndex+1
 									uni.navigateTo({
-										url:'/pages/news/news?columnId='+e.currentIndex
+										url:'/pages/news/news?columnId='+index
 									})
-								}
-							
+								
 							}
+							
 						},
 						toSearch(){
 							uni.navigateTo({
@@ -285,7 +285,10 @@
 							})
 						},
 					},
-			created(){
+			beforeCreate(){
+				uni.showLoading({
+					title: '加载中'
+				});
 				// 获取第一栏目数据
 				uni.request({
 					url:`${this.baseUrl}/index/fetv/column?columnId=1`,
@@ -293,9 +296,11 @@
 					success: (res) => {
 					        console.log(res.data.rows[0].informationApiList);
 					        this.news =res.data.rows[0].informationApiList
+							uni.hideLoading();
+							
 					    }
 				})
-			}
+			},
 		}	
 	
 		
@@ -337,7 +342,7 @@
 	white-space: nowrap;
 	
 	/deep/.uni-scroll-view-content{
-		width: 320%;
+		width: 260%;
 		background-color: #f7f8f9;
 
 	}

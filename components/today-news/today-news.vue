@@ -31,7 +31,7 @@
 		methods:{
 			newsMore(){
 				uni.navigateTo({
-					url:"/pages/news/news"
+					url:"/pages/news/news?columnId=2"
 				})
 			},
 		},
