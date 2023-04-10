@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<!-- 搜索 -->
 		<view class="search-contain">
 			<input type="text" value="" placeholder="搜搜" style="font-size: 12px;padding-left: 14rpx;color: #c74c60;" />
 			<uni-icons type="search" size="21" color="#fff"></uni-icons>

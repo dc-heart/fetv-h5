@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "index-header": "/components/index-header/index-header",
+    "index-header-icon": "/components/index-header-icon/index-header-icon",
+    "o-divider": "/uni_modules/o-divider/components/o-divider/o-divider"
+  }
+}

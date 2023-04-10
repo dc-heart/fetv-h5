@@ -3,32 +3,20 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
-			"style": {
+			"style": 
+			{
 				"navigationBarTitleText": "uni-app"
 			}
-		}, {
-			"path": "pages/my/my",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}, {
+		},  
+		{
 			"path": "pages/college/college",
-			"style": {
+			"style": 
+			{
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
-		}, {
-			"path": "pages/vote/vote",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		}
-	    ,{
+		},
+	    {
             "path" : "pages/news/news",
             "style" :                                                                                    
             {
@@ -36,8 +24,8 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        ,{
+        },
+        {
             "path" : "pages/news/details/details",
             "style" :                                                                                    
             {
@@ -45,26 +33,8 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        ,{
-            "path" : "pages/specials/specials",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/interviews/interviews",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
+        },
+        {
             "path" : "pages/columns/columns",
             "style" :                                                                                    
             {
@@ -72,9 +42,8 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        
-        ,{
+        },
+		{
             "path" : "pages/video/video",
             "style" :                                                                                    
             {
@@ -82,8 +51,8 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        ,{
+        },
+		{
             "path" : "pages/classrooms/classrooms",
             "style" :                                                                                    
             {
@@ -91,9 +60,26 @@
                 "enablePullDownRefresh": false
             }
             
+        },
+		{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+            "path" : "pages/video/video-details/video-details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
         }
         ,{
-            "path" : "pages/search/search",
+            "path" : "pages/columns/columns-details/columns-details",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -102,7 +88,43 @@
             
         }
         ,{
-            "path" : "pages/video/video-details/video-details",
+            "path" : "pages/columns/columns-details/columns-details-more/columns-details-more",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/columns/spring/spring",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/special/special",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/special/special-details/special-details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/special/special-more/special-more",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -133,18 +155,6 @@
 				"text": "院校",
 				"iconPath": "static/教育网图片/g2.png",
 				"selectedIconPath": "static/教育网图片/r2.png"
-			},
-			{
-				"pagePath": "pages/vote/vote",
-				"text": "投票",
-				"iconPath": "static/教育网图片/g3.png",
-				"selectedIconPath": "static/教育网图片/r3.png"
-			},
-			{
-				"pagePath": "pages/my/my",
-				"text": "我的",
-				"iconPath": "static/教育网图片/g4.png",
-				"selectedIconPath": "static/教育网图片/g4.png"
 			}
 		]
 	}

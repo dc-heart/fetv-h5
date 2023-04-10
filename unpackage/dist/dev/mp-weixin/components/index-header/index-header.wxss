@@ -62,25 +62,4 @@
   color: #ffdcab;
   opacity: 0.5;
 }
-.header .search.data-v-0f7e6684 {
-  position: absolute;
-  left: 578rpx;
-  top: 41rpx;
-  width: 151rpx;
-  height: 67rpx;
-  background-color: #5d0312;
-  border-radius: 34rpx;
-  opacity: 0.2;
-}
-.header .search .searchbutton.data-v-0f7e6684 {
-  position: absolute;
-  margin-left: 99rpx;
-  margin-top: 16rpx;
-  font-size: 30rpx;
-}
-.header .search .searchinput.data-v-0f7e6684 {
-  position: absolute;
-  margin-top: 12rpx;
-  margin-left: 24rpx;
-}
 

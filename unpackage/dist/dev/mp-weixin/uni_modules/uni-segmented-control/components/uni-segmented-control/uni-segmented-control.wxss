@@ -56,9 +56,9 @@
   border-bottom-right-radius: 5px;
 }
 .segmented-control__item--text.data-v-064e9cd1 {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
   padding: 6px 0;
+  border-bottom: 2px solid #ba0825;
+  border-bottom-width: 8rpx;
 }
 .segmented-control__text.data-v-064e9cd1 {
   font-size: 14px;

@@ -1,0 +1,7 @@
+{
+  "name": "special_get_row",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

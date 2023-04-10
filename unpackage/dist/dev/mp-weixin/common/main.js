@@ -8,10 +8,11 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(wx, createApp) {
+/* WEBPACK VAR INJECTION */(function(wx, uni, createApp) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
 __webpack_require__(/*! uni-pages */ 26);
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 27));
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
@@ -21,9 +22,61 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
+//设置全局请求根路径
+_vue.default.prototype.baseUrl = "http://192.168.1.54:8080";
+uni.addInterceptor('request', {
+  success: function success(args) {
+    var list = args.data;
+    function removeString(obj) {
+      //判断参数是否是数组或对象，如果不是，直接返回原值
+      if (!obj || (0, _typeof2.default)(obj) !== "object") {
+        return obj;
+      }
+      //遍历对象的属性或元素
+      for (var key in obj) {
+        //判断属性或元素是否属于对象自身
+        // if (obj.hasOwnProperty.call(key)) {
+        //判断属性或元素是否是字符串类型
+        if (typeof obj[key] === "string") {
+          //使用正则表达式匹配目标字符串，并赋值给原属性或元素
+          // http://192.168.1.13:8080
+          //192.168.1.54:8080
+          obj[key] = obj[key].replace(/http:\/\/192\.168\.1\.13:8080/g, "");
+          obj[key] = obj[key].replace(/http:\/\/192\.168\.110\.143:8080/g, "");
+          obj[key] = obj[key].replace(/http:\/\/192\.168\.1\.18:8080/g, "");
+          obj[key] = obj[key].replace(/http:\/\/192\.168\.1\.40:8080/g, "");
+          obj[key] = obj[key].replace(/http:\/\/192\.168\.1\.40:8080/g, "");
+        } else if ((0, _typeof2.default)(obj[key]) === "object") {
+          //如果属性或元素是数组或对象类型，就递归调用函数
+          removeString(obj[key]);
+        }
+        // }
+      }
+      //返回处理后的对象
+
+      return obj;
+    }
+    // 如果某个属性的值是字符串且包含"/profile"，就在"/profile"前面添加ip地址
+    function addPrefix(obj) {
+      for (var key in obj) {
+        if (typeof obj[key] === 'string' && obj[key].includes('/profile')) {
+          obj[key] = obj[key].replace(/\/profile/g, 'http://192.168.1.54:8080/profile');
+          // obj[key] = obj[key].replace(/\/profile/g, 'http://43.139.172.18:8088/profile');
+        } else if ((0, _typeof2.default)(obj[key]) === 'object') {
+          addPrefix(obj[key]);
+        }
+      }
+      return obj;
+    }
+    removeString(list);
+    // console.log(list, '12312312312312')
+    addPrefix(list);
+    return list;
+  }
+});
 var app = new _vue.default(_objectSpread({}, _App.default));
 createApp(app).$mount();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["createApp"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["createApp"]))
 
 /***/ }),
 

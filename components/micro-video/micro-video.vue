@@ -9,20 +9,13 @@
 						查看更多
 					</text>
 				</view>
-								<scroll-view scroll-x="true" style="white-space: nowrap" show-scrollbar>
-								<view class="specialcontent"  v-for="item in video" :key="item.informationId">
-									<image :src="baseUrl+item.image" class="specialimg"></image>
-									<text class="specialtitle">{{item.title}}</text>
-									
-								
-									<!-- <image src="../../static/教育网图片/p18.jpg" class="specialimg" ></image> -->
-									<!-- <text class="specialtitle2">宁德脚步纪录片</text> -->
-								</view>
-								</scroll-view>
+				<scroll-view scroll-x="true" style="white-space: nowrap" show-scrollbar>
+					<view class="specialcontent"  v-for="item in video" :key="item.informationId" @click="videoDetails(item.informationId)">
+							<image :src="item.image" class="specialimg"></image>
+							<text class="specialtitle">{{item.title}}</text>
+					</view>
+				</scroll-view>
 				</uni-section>	
-				
-				
-
 	</view>
 </template>
 
@@ -32,23 +25,32 @@
 		data() {
 			return {
 				video:[],
-				
 			}
 		},
 		created() {
+			uni.showLoading({
+				title: '加载中'
+			});
 			uni.request({
-				url:`${this.baseUrl}/index/fetv/column/getVideoBySix?columnId=1`,
-				method:'GET',
-				success: (res) => {
-				        console.log(res.data);
-				        this.video =res.data.rows[0].informationApiList
-				    }
+			url:`${this.baseUrl}/index/fetv/column?columnId=10`,
+			method:'GET',
+			success: (res) => {
+				 
+					this.video =res.data.rows[0].informationApiList
+					console.log(this.video);
+					uni.hideLoading();
+					}
 			})
 		},
 		methods:{
 			viedosMore(){
 				uni.navigateTo({
-					url:'/pages/video/video'
+					url:'/pages/video/video?columnId=10'
+				})
+			},
+			videoDetails(e){
+				uni.navigateTo({
+					url:"/pages/video/video-details/video-details?informationId="+e
 				})
 			}
 		}
@@ -97,7 +99,6 @@ height: 270rpx;
 		ont-size: 36rpx;
 	}
 	.specialtitle{
-		
 		position: absolute;
 		left: 40rpx;
 		top: 214rpx;
@@ -108,8 +109,6 @@ height: 270rpx;
 		line-height: 68rpx;
 		letter-spacing: 0rpx;
 		color: #000000;
-		
 	}
-
-	}
+}
 </style>

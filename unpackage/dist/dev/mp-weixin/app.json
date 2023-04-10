@@ -1,9 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my/my",
     "pages/college/college",
-    "pages/vote/vote"
+    "pages/news/news",
+    "pages/news/details/details",
+    "pages/columns/columns",
+    "pages/video/video",
+    "pages/classrooms/classrooms",
+    "pages/search/search",
+    "pages/video/video-details/video-details"
   ],
   "subPackages": [],
   "window": {
@@ -27,18 +32,6 @@
         "text": "院校",
         "iconPath": "static/教育网图片/g2.png",
         "selectedIconPath": "static/教育网图片/r2.png"
-      },
-      {
-        "pagePath": "pages/vote/vote",
-        "text": "投票",
-        "iconPath": "static/教育网图片/g3.png",
-        "selectedIconPath": "static/教育网图片/r3.png"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "static/教育网图片/g4.png",
-        "selectedIconPath": "static/教育网图片/g4.png"
       }
     ]
   },

@@ -101,34 +101,52 @@ var components
 try {
   components = {
     indexHeader: function () {
-      return __webpack_require__.e(/*! import() | components/index-header/index-header */ "components/index-header/index-header").then(__webpack_require__.bind(null, /*! @/components/index-header/index-header.vue */ 59))
+      return __webpack_require__.e(/*! import() | components/index-header/index-header */ "components/index-header/index-header").then(__webpack_require__.bind(null, /*! @/components/index-header/index-header.vue */ 101))
     },
     uniSegmentedControl: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control */ "uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control.vue */ 66))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control */ "uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control.vue */ 108))
     },
-    uniCard: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 73))
+    carouselMap: function () {
+      return __webpack_require__.e(/*! import() | components/carousel-map/carousel-map */ "components/carousel-map/carousel-map").then(__webpack_require__.bind(null, /*! @/components/carousel-map/carousel-map.vue */ 115))
+    },
+    indexNews: function () {
+      return __webpack_require__.e(/*! import() | components/index-news/index-news */ "components/index-news/index-news").then(__webpack_require__.bind(null, /*! @/components/index-news/index-news.vue */ 122))
+    },
+    special: function () {
+      return __webpack_require__.e(/*! import() | components/special/special */ "components/special/special").then(__webpack_require__.bind(null, /*! @/components/special/special.vue */ 129))
+    },
+    interviews: function () {
+      return __webpack_require__.e(/*! import() | components/interviews/interviews */ "components/interviews/interviews").then(__webpack_require__.bind(null, /*! @/components/interviews/interviews.vue */ 136))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 80))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 143))
     },
     uniGrid: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid/uni-grid */ "uni_modules/uni-grid/components/uni-grid/uni-grid").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid/uni-grid.vue */ 87))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid/uni-grid */ "uni_modules/uni-grid/components/uni-grid/uni-grid").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid/uni-grid.vue */ 150))
     },
     uniGridItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid-item/uni-grid-item */ "uni_modules/uni-grid/components/uni-grid-item/uni-grid-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.vue */ 94))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid-item/uni-grid-item */ "uni_modules/uni-grid/components/uni-grid-item/uni-grid-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.vue */ 157))
     },
-    uniRow: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-row/uni-row */ "uni_modules/uni-row/components/uni-row/uni-row").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-row/uni-row.vue */ 101))
-    },
-    uniCol: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-col/uni-col */ "uni_modules/uni-row/components/uni-col/uni-col").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-col/uni-col.vue */ 108))
+    classrooms: function () {
+      return __webpack_require__.e(/*! import() | components/classrooms/classrooms */ "components/classrooms/classrooms").then(__webpack_require__.bind(null, /*! @/components/classrooms/classrooms.vue */ 164))
     },
     oDivider: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/o-divider/components/o-divider/o-divider */ "uni_modules/o-divider/components/o-divider/o-divider").then(__webpack_require__.bind(null, /*! @/uni_modules/o-divider/components/o-divider/o-divider.vue */ 115))
+      return __webpack_require__.e(/*! import() | uni_modules/o-divider/components/o-divider/o-divider */ "uni_modules/o-divider/components/o-divider/o-divider").then(__webpack_require__.bind(null, /*! @/uni_modules/o-divider/components/o-divider/o-divider.vue */ 171))
+    },
+    microVideo: function () {
+      return __webpack_require__.e(/*! import() | components/micro-video/micro-video */ "components/micro-video/micro-video").then(__webpack_require__.bind(null, /*! @/components/micro-video/micro-video.vue */ 178))
     },
     indexFooter: function () {
-      return __webpack_require__.e(/*! import() | components/index-footer/index-footer */ "components/index-footer/index-footer").then(__webpack_require__.bind(null, /*! @/components/index-footer/index-footer.vue */ 122))
+      return __webpack_require__.e(/*! import() | components/index-footer/index-footer */ "components/index-footer/index-footer").then(__webpack_require__.bind(null, /*! @/components/index-footer/index-footer.vue */ 185))
+    },
+    todayNews: function () {
+      return __webpack_require__.e(/*! import() | components/today-news/today-news */ "components/today-news/today-news").then(__webpack_require__.bind(null, /*! @/components/today-news/today-news.vue */ 192))
+    },
+    uniList: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 199))
+    },
+    uniListItem: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 206))
     },
   }
 } catch (e) {
@@ -185,7 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -278,95 +296,12 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   data: function data() {
     return {
-      items: ['推荐', '要闻资讯', '校园联播', 'FETV', '招生考试'],
+      titles: [],
       current: 0,
+      news: [],
       list: [{
         id: 0,
         img: '../../static/教育网图片/p10.jpg',
@@ -383,34 +318,94 @@ var _default = {
         id: 3,
         img: '../../static/教育网图片/p13.jpg',
         text: '《我在厦门我很好》'
+      }],
+      classroom: [{
+        id: 0,
+        img: '../../static/教育网图片/p13.jpg',
+        title: '最新！福建各地寒暑假时间定了',
+        text: '50.3万次播放'
+      }, {
+        id: 1,
+        img: '../../static/教育网图片/p14.jpg',
+        title: '备战中考 | 数学：对应为经相得益彰——函数问题中的“数形..',
+        text: '50.3万次播放'
+      }, {
+        id: 2,
+        img: '../../static/教育网图片/p20.jpg',
+        title: '备战中考 | 化学：物质构成的奥秘 （厦门五缘实验学校 李玥)',
+        text: '50.3万次播放'
       }]
     };
-    classroom: [{
-      id: 0,
-      img: '../../static/教育网图片/p13.jpg',
-      title: '最新！福建各地寒暑假时间定了',
-      text: '50.3万次播放'
-    }, {
-      id: 1,
-      img: '../../static/教育网图片/p14.jpg',
-      title: '备战中考 | 数学：对应为经相得益彰——函数问题中的“数形..',
-      text: '50.3万次播放'
-    }, {
-      id: 2,
-      img: '../../static/教育网图片/p20.jpg',
-      title: '备战中考 | 化学：物质构成的奥秘 （厦门五缘实验学校 李玥)',
-      text: '50.3万次播放'
-    }];
   },
   methods: {
+    // 获取栏目标题
+    getColumns: function getColumns() {
+      var _this = this;
+      uni.request({
+        url: "".concat(this.baseUrl, "/index/fetv/column/list?pageNum=1&pageSize=13"),
+        method: 'GET',
+        success: function success(res) {
+          res.data.rows.forEach(function (item, index) {
+            if (item.columnTitle == '首页' || item.columnTitle == '更多') {
+              return;
+            }
+            console.log(item.columnTitle);
+            _this.titles.push(item.columnTitle);
+          });
+        }
+      });
+    },
     onClickItem: function onClickItem(e) {
+      console.log(e);
       if (this.current !== e.currentIndex) {
         this.current = e.currentIndex;
+        var index = e.currentIndex + 1;
+        if (e.currentIndex == 5 || e.currentIndex == 9) {
+          uni.navigateTo({
+            url: '/pages/video/video?columnId=' + index
+          });
+        } else if (e.currentIndex == 10) {
+          uni.navigateTo({
+            url: '/pages/video/video?columnId=' + 13
+          });
+        } else {
+          uni.navigateTo({
+            url: '/pages/news/news?columnId=' + index
+          });
+        }
       }
+    },
+    toSearch: function toSearch() {
+      uni.navigateTo({
+        url: "/pages/search/search"
+      });
+    },
+    todayNewsDetails: function todayNewsDetails(e) {
+      uni.navigateTo({
+        url: "/pages/news/details/details?newsinformationid=" + e
+      });
     }
+  },
+  created: function created() {
+    var _this2 = this;
+    this.getColumns();
+    uni.showLoading({
+      title: '加载中'
+    });
+    // 获取第二栏目数据
+    uni.request({
+      url: "".concat(this.baseUrl, "/index/fetv/column?columnId=2"),
+      method: 'GET',
+      success: function success(res) {
+        _this2.news = res.data.rows[0].informationApiList;
+        console.log(_this2.news);
+        uni.hideLoading();
+      }
+    });
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

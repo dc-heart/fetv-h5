@@ -1,21 +1,16 @@
 <template>
 	<view>
-		<!-- 要闻资讯 -->
+		<!-- 今日新闻 -->
 		<uni-card style="width: 705rpx;border: 0;
 		height: 293rpx; padding: 0;" margin="44rpx 21rpx 33rpx 24rpx">
-				        			   <text class="recent-news">{{todaynews}}</text>
-				        			   <text class="vertical"></text>
-				        			   <text class="daily-news">每日最新精彩资讯</text>
-				        			   <text class="see-more" @click="newsMore">查看更多</text>
-									   <view v-for="item in recentnews" :key="item.informationId">
-									   	<uni-section :title="item.title" type="circle" titleColor="#272727" class="titles"></uni-section>
-									   	<!-- <uni-section title="小手拉大手 共迎冬奥会" type="circle"  titleColor="#272727" class="titles"></uni-section>
-									   	<uni-section title="省教育厅推广首批9个落实“双减”工作典型案例" type="circle"  titleColor="#272727" class="titles"></uni-section> -->
-									   </view>
-				        			   
-		</uni-card>
-		
-				        		  
+			   <text class="recent-news">{{todaynews}}</text>
+			   <text class="vertical"></text>
+			   <text class="daily-news">每日最新精彩资讯</text>
+			   <text class="see-more" @click="newsMore">查看更多</text>
+			   <view v-for="item in recentnews" :key="item.informationId" @click="newsDetails(item.informationId)">
+				<uni-section :title="item.title" type="circle" titleColor="#272727" class="titles"></uni-section>
+			   </view>        			   
+		</uni-card>	        		  
 	</view>
 </template>
 
@@ -34,9 +29,13 @@
 					url:"/pages/news/news?columnId=2"
 				})
 			},
+			newsDetails(e){
+				uni.navigateTo({
+					url:'/pages/news/details/details?newsinformationid='+e
+				})
+			}
 		},
 		created() {
-		
 				uni.request({
 					url:`${this.baseUrl}/index/fetv/information/TodayInformation`,
 					method:'GET',
@@ -45,15 +44,11 @@
 					        this.recentnews = res.data.rows.slice(0,3);
 					    }
 				})
-
-			
-			
 		}
 	}
 </script>
 
 <style lang="scss">
-	
 	.recent-news{
 			font-family: NotoSansHans-Bold;
 				font-size: 34rpx;

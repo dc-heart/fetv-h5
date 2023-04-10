@@ -1,5 +1,6 @@
 <template>
 	<view >
+		<!-- 头部区域 -->
 		<index-header></index-header>
 		<index-header-icon></index-header-icon>
 								<view class="news" v-for="(item,index) in allnews" :key="item.informationId" @click="toDetails(item.informationId)">
@@ -10,7 +11,6 @@
 										{{item.likeNum}}浏览
 									</view>
 								</view>
-							
 	</view>
 
 </template>
@@ -21,20 +21,12 @@
 		data() {
 			return {
 				allnews:[],
-				columnId:''
-				// news:[],
+				columnId:'',
 			
 			};
 		},
-
-		
-		// onLoad(options){
-		 
-		//     this.allnews = JSON.parse(decodeURIComponent(options.allnews));
-		//     console.log(this.allnews);
-		// 		},
 		methods:{
-			
+			// 跳转到新闻详情并传id
 			toDetails(e){
 				console.log(e)
 				uni.navigateTo({

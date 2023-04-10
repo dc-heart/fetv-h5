@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<!-- 头部区域 -->
 		<index-header></index-header>
 		<index-header-icon></index-header-icon>
 		<view class="fetv">
@@ -8,18 +9,15 @@
 			</view>
 			<view class="fetv-footer">
 				<text class="fetv-text">福建教育网</text>
-				<view class="fetv-fan">
-					{{this.videodetails.browseNum}}万粉丝
-				</view>
 			</view>
 		</view>
 		<button size="mini" type="warn" class="concern" @click="concernclick" v-show="concern===0">关注</button>
 		<button size="mini" type="warn" class="concern" v-show="concern===1">已关注</button>
-		<video :src="baseUrl+videodetails.video" object-fit="cover" class="content-video"></video>
+		<video :src="videodetails.video" object-fit="cover" class="content-video"></video>
 				<view class="content-title">
 					{{videodetails.title}}
 				</view>
-				
+				<!-- 视频尾部区域 -->
 				<view class="footer">
 					<view class="content-footer">
 						<text class="content-footer-title">{{videodetails.browseNum}}次播放</text>
@@ -27,8 +25,8 @@
 					<view class="content-footer">
 						<text  class="content-footer-title">发布时间:{{videodetails.createTime}}</text>
 					</view>
-					
 				</view>
+				<!-- 视频内容区域 -->
 				<view class="content-details">
 					{{videodetails.content}}
 				</view>
@@ -55,11 +53,13 @@
 				this.concern=1
 			}
 		},
+		// 取出传递的id
 		onLoad(options) {
 			this.informationId=options.informationId
 			console.log(this.informationId);
 		},
 		created() {
+			// 根据id获取新闻详情信息
 			uni.showLoading({
 				title: '加载中'
 			});
@@ -93,10 +93,9 @@
 			border: solid 1rpx #eeeeee;
 		}
 		.fetv-footer{
-			display: flex;
-			flex-direction: column;
+			// display: flex;
+			// flex-direction: column;
 			.fetv-text{
-					
 					font-family: NotoSansHans-Regular;
 					font-size: 26rpx;
 					font-weight: bold;
@@ -114,7 +113,6 @@
 					color: #666666;
 			}
 		}
-		
 	}
 .concern{
 	position: absolute;
@@ -128,6 +126,7 @@
 .content-video{
 		width: 750rpx;
 		height: 427rpx;
+		margin-top: 20rpx;
 		/deep/.uni-video-cover-play-button{
 				width: 97rpx;
 				height: 97rpx;

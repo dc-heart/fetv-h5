@@ -1,12 +1,13 @@
 <template>
 	<view>
+		<!-- 轮播图 -->
 		<swiper  :autoplay="true" :interval="3000" :duration="1000" style="width: 705rpx; height: 424rpx;margin-left: 24rpx;margin-top: 41rpx;">
 			<swiper-item v-for="(item,index) in img" :key="index++">
 				        					<image class="content-image" :src="item.url" mode="scaleToFill"></image>
 											<view class="shadow">
 											      <text >{{item.name}}</text>
 											      <text class="box1">{{index}}<text class="box2">/{{img.length}}</text></text>
-											     </view>
+											</view>
 			</swiper-item>
 		</swiper>
 	</view>

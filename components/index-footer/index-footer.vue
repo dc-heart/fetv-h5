@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<!-- 尾部区域内容 -->
 		<view class="footer">
 			<image class="fetv" src="/static/教育网图片//logo2.png" mode="scaleToFill"></image>
 			<text class="title">福建教育网 www.fetv.cn</text>
@@ -29,8 +30,6 @@
 				<text  class="teltitle1">闽ICP备 <text class="tel-number1">  05027762号-1 </text> </text>
 				<text  class="teltitle">互联网新闻信息服务许可证编号<text class="tel-number">（35120190012）</text></text>
 				<text  class="teltitle">信息网络传播视听节目许可证号<text class="tel-number">（1309391）</text></text>
-				
-				
 			</view>
 			<view class="footer-img">
 				<image class="footer-photosm" src="../../static/教育网图片/图层 642.jpg" mode=""></image>
@@ -39,7 +38,6 @@
 				<image class="footer-photo" src="../../static/教育网图片/图层 645.jpg" mode=""></image>
 			</view>
 		</view>
-		
 	</view>
 </template>
 
@@ -61,8 +59,6 @@
 		height: 989rpx;
 		margin-top: 65rpx;
 		background-color: #f7f8f9;
-		
-
 	.fetv{
 		width: 116rpx;
 		height: 88rpx;
@@ -77,7 +73,6 @@
 		top: 33rpx;
 		color: #1f1f1f;;
 		font-size: 30rpx;
-
 	}
 	.supervisor{
 		position: absolute;
@@ -85,7 +80,6 @@
 		top: 84rpx;
 		font-size: 22rpx;
 		line-height: 14rpx;
-		
 		opacity: 0.5;
 	}
 	.host{
@@ -93,7 +87,6 @@
 		left: 165rpx;
 		top: 104rpx;
 		font-size: 22rpx;
-		
 		opacity: 0.5;	
 	}
 	.search{
@@ -105,7 +98,6 @@
 		background-color: #5d0312;
 		border-radius: 34rpx;
 		opacity: 0.2;
-	
 		.searchbutton{
 			position: absolute;
 			margin-left:99rpx ;
@@ -140,18 +132,15 @@
 		.kind-link:nth-child(5){
 			width: 40%;
 		}
-		
 	}
 	.tel-email{
 		display: flex;
 		flex-wrap: wrap;
-		
 		.tel{
 			font-size: 24rpx;
 			line-height: 50rpx;
 			color: #767676;
 			margin-left: 23rpx;
-			
 		}
 		.teltitle1{
 			font-size: 24rpx;
@@ -172,10 +161,7 @@
 				color: #1b72cb;
 			}
 		}
-		
-		
 	}
-	
 	.footer-img{
 		display: flex;
 		justify-content: space-around;
@@ -190,6 +176,5 @@
 			margin-top: 40rpx;
 		}
 	}
-	
 }
 </style>

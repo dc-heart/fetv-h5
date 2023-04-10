@@ -1,4 +1,5 @@
 <template>
+	<!-- 要闻聚焦 -->
 	<view class="container" >
 		<view class="news"v-for="(item,index) in news" :key="item.index">
 			<view class="news-title">

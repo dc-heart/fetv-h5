@@ -1,11 +1,10 @@
 <template>
-	
+		<!-- 头部区域 -->
 		<view class="header">
 			<image class="fetv" src="/static/教育网图片/logo.png" mode="scaleToFill"></image>
 			<text class="title">福建教育网 www.fetv.cn</text>
 			<text class="supervisor" >主管:福建省委教育工委、福建省教育厅</text>
 			<text class="host">主办:福建教育电视台</text>
-		
 		</view>
 
 </template>
@@ -41,7 +40,6 @@
 		top: 33rpx;
 		color:#ffdcab ;
 		font-size: 30rpx;
-
 	}
 	.supervisor{
 		position: absolute;
@@ -60,8 +58,5 @@
 		color: #ffdcab;
 		opacity: 0.5;	
 	}
-
-	
-	
 }
 </style>

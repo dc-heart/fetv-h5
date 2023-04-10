@@ -10,12 +10,10 @@
 				<view class="">
 					来源:{{news.source}}
 				</view>
-				
 			</view>
 			
 			<view class="news-content-box">
 				<text class="news-content">{{news.content}}</text>
-			
 			</view>
 		
 	</view>
@@ -31,15 +29,16 @@
 		},
 		
 		onLoad(options){
+			// 接受news页面传递的id并存储
 		    this.newsinformationid = options.newsinformationid;
 		    console.log(this.newsinformationid);
 				},
 		created() {
+			// 根据id获取新闻详情
 			uni.request({
 				url:`${this.baseUrl}/index/fetv/information?informationId=${this.newsinformationid}`,
 				method:'GET',
 				success: (res) => {
-					
 				        console.log(res.data.data);
 				        this.news = res.data.data;
 				    }

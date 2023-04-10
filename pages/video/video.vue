@@ -1,8 +1,9 @@
 <template>
 	<view>
+		<!-- 头部区域 -->
 		<index-header></index-header>
 		<index-header-icon></index-header-icon>
-		
+		<!-- 内容区域 -->
 		<view class="content" v-for="item in video" :key="item.informationId" @click="videoMore(item.informationId)">
 			<view class="fetv">
 				<view class="fetv-cicle">
@@ -14,29 +15,28 @@
 			<view class="content-title">
 				{{item.title}}
 			</view>
-			<video :src="baseUrl+item.video" object-fit="cover" class="content-video"></video>
-			<view class="footer">
-				<view class="content-footer">
-					<image src="../../static/教育网图片/g10.png" style="width: 25rpx;
+			<video :src="item.video" object-fit="cover" class="content-video"></video>
+			<!-- 根据返回的结果动态绑定类 -->
+			<view :class="item.commentNum ? 'footer':''">
+				<view :class="item.commentNum ? '':'content-footer'">
+					<image src="../../static/教育网图片/g17.png" style="width: 25rpx;
 	height: 23rpx;"></image>
-					<text class="content-footer-title">{{item.browseNum}}万</text>
+					<text class="content-footer-title">{{item.browseNum}}</text>
 				</view>
-				<view class="content-footer">
+				<view class="content-footer" v-if="item.commentNum">
 					<image src="../../static/教育网图片/g18.png" style="width: 25rpx;
 	height: 23rpx;"></image>
-					<text  class="content-footer-title">{{item.commentNum}}万</text>
+					<text  class="content-footer-title">{{item.commentNum}}</text>
 				</view>
-				<view class="content-footer">
+				<view class="content-footer" v-if="item.likeNum">
 					<image src="../../static/教育网图片/g19.png" style="width: 25rpx;
 	height: 23rpx;"></image>
 					<text  class="content-footer-title">{{item.likeNum}}</text>
-					
 				</view>
-				
 			</view>
+			<!-- 分割线 -->
 			 <o-divider margin="10rpx"></o-divider>
 		</view>
-		
 	</view>
 </template>
 
@@ -44,10 +44,12 @@
 	export default {
 		data() {
 			return {
-				video:[]
+				video:[],
+				id:'',
 			};
 		},
 		methods:{
+			// 跳转到视频详情页并传递id
 			videoMore(e){
 				console.log(e);
 				uni.navigateTo({
@@ -55,16 +57,22 @@
 				})
 			}
 		},
+		// 获取上个页面传递的id
+		onLoad(options){
+		    this.id = options.columnId;
+		    console.log(this.id);
+				},
 		created() {
+			// 根据id获取视频
 			uni.showLoading({
 				title: '加载中'
 			});
 			uni.request({
-			url:`${this.baseUrl}/index/fetv/column/getVideoBySix?columnId=1`,
+			url:`${this.baseUrl}/index/fetv/column?columnId=${this.id}`,
 			method:'GET',
 			success: (res) => {
-			        console.log(res.data)
 			        this.video =res.data.rows[0].informationApiList
+					console.log(this.video);
 					uni.hideLoading();
 					}
 		})
@@ -73,7 +81,6 @@
 </script>
 
 <style lang="scss" scoped>
-
 .content{
 	.fetv{
 		margin-left: 24rpx;
@@ -105,8 +112,8 @@
 		width: 750rpx;
 		height: 427rpx;
 		/deep/.uni-video-cover-play-button{
-				width: 97rpx;
-				height: 97rpx;
+			width: 97rpx;
+			height: 97rpx;
 			background-image: url("../../static/教育网图片/g20.png");
 			background-size: cover;
 		}
@@ -114,6 +121,19 @@
 			display: none;
 		}
 	}
+	.content-footer{
+			margin-left: 136rpx;
+			.content-footer-title{
+				margin-left: 13rpx;
+				font-family: NotoSansHans-Regular;
+					font-size: 22rpx;
+					font-weight: normal;
+					font-stretch: normal;
+					line-height: 68rpx;
+					letter-spacing: 0rpx;
+					color: #747e8c;
+			}
+		}
 	.footer{
 		display: flex;
 		justify-content: space-around;
